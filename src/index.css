@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: #f4f5f7;
+  color: #252525;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.app {
+  width: min(900px, 90%);
+  margin: 60px auto;
+}
+
+.header {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #777;
+}
+
+.team-directory {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+}
+
+.team-member-card {
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 22px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.team-member-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.member-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.member-name {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.member-department {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.member-email {
+  color: #888;
+  font-size: 13px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-developer {
+  background: #e9efff;
+  color: #3457b1;
+}
+
+.badge-designer {
+  background: #fce8f3;
+  color: #b83280;
+}
+
+.badge-manager {
+  background: #e6f4ea;
+  color: #287d46;
+}
+
+.footer {
+  margin-top: 30px;
+  padding-top: 18px;
+  border-top: 1px solid #ddd;
+  color: #888;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .team-directory {
+    grid-template-columns: 1fr;
+  }
+
+  .app {
+    margin: 35px auto;
+  }
+}
+
+.filter-select {
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  color: #252525;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.filter-select {
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  color: #252525;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.member-count {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  padding: 40px 20px;
+  text-align: center;
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  color: #777;
+}
